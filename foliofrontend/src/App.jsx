@@ -51,8 +51,7 @@ const name = "Ashish Chandra Paudel"
       <nav className="sticky top-0 z-50 backdrop-blur-md bg-slate-950/80 border-b border-slate-800/50 py-3 md:py-4 px-4 md:px-6">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           <div className="text-xl md:text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-            {name.split(" ")[0][0]}
-            {name.split(" ")[1]?.[0] || ""}
+            {name.split(" ").map(w => w[0].toUpperCase()).join("")}
           </div>
           <div className="flex gap-3 md:gap-4">
             {socialLinks.map((link) => {
@@ -152,38 +151,59 @@ const name = "Ashish Chandra Paudel"
       </section>
 
       {/* Skills Section */}
-      <section className="relative py-12 md:py-20 px-4 md:px-6">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 md:mb-12 text-center">
-            <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              Technical Arsenal
-            </span>
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-            {Object.entries(skills).map(([category, techs]) => (
-              <div
-                key={category}
-                className="group p-5 md:p-6 rounded-xl border border-slate-700 bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm hover:border-blue-400/50 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300"
-              >
-                <h3 className="text-lg md:text-xl font-bold text-cyan-400 mb-3 md:mb-4 group-hover:text-blue-400 transition-colors duration-300">
-                  {category}
-                </h3>
-                <ul className="space-y-2">
-                  {techs.map((tech, idx) => (
-                    <li
-                      key={idx}
-                      className="text-slate-300 text-xs md:text-sm hover:text-cyan-300 transition-colors duration-300 flex items-center gap-2"
-                    >
-                      <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full group-hover:bg-blue-400 transition-colors duration-300 flex-shrink-0"></span>
-                      {tech}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+     <section className="relative py-16 md:py-24 px-4 sm:px-6">
+  <div className="max-w-7xl mx-auto">
+    
+    {/* Section Heading */}
+    <div className="text-center mb-14 md:mb-20">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight">
+        <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-500 bg-clip-text text-transparent">
+          Technical Arsenal
+        </span>
+      </h2>
+      <p className="mt-4 text-slate-400 max-w-2xl mx-auto text-sm sm:text-base">
+        Technologies, tools, and frameworks I use to build scalable and performant applications.
+      </p>
+    </div>
+
+    {/* Skills Grid */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {Object.entries(skills).map(([category, techs]) => (
+        <div
+          key={category}
+          className="group relative rounded-2xl p-6 border border-slate-700/60 
+                     bg-gradient-to-br from-slate-800/60 to-slate-900/60 
+                     backdrop-blur-xl transition-all duration-300
+                     hover:-translate-y-2 hover:border-cyan-400/60
+                     hover:shadow-xl hover:shadow-cyan-500/20"
+        >
+          {/* Glow Effect */}
+          <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-cyan-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+          {/* Content */}
+          <div className="relative z-10">
+            <h3 className="text-lg md:text-xl font-semibold text-cyan-400 mb-4 group-hover:text-blue-400 transition-colors">
+              {category}
+            </h3>
+
+            <ul className="space-y-3">
+              {techs.map((tech, idx) => (
+                <li
+                  key={idx}
+                  className="flex items-center gap-3 text-slate-300 text-sm group-hover:text-slate-200 transition-colors"
+                >
+                  <span className="w-2 h-2 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 flex-shrink-0"></span>
+                  {tech}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* CTA Section */}
       <section className="relative py-12 md:py-20 px-4 md:px-6">
