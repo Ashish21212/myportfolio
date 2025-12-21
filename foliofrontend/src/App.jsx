@@ -6,7 +6,7 @@ import './App.css'
 
 function App() {
 const name = "Ashish Chandra Paudel"
-  const profileImage = "../public/asis_pic.jpg"
+  const profileImage = "/asis_pic.jpg"
 
   const interests = [
     "Full-Stack Web Development",
