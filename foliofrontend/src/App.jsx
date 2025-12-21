@@ -25,8 +25,8 @@ const name = "Ashish Chandra Paudel"
   }
 
   const socialLinks = [
-    { icon: Github, href: "#", label: "GitHub", color: "hover:text-cyan-400" },
-    { icon: Linkedin, href: "#", label: "LinkedIn", color: "hover:text-blue-400" },
+    { icon: Github, href: "https://github.com/Ashish21212", label: "GitHub", color: "hover:text-cyan-400" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/ashish-chandra-paudel-b49603224/", label: "LinkedIn", color: "hover:text-blue-400" },
     { icon: Mail, href: "mailto:your@email.com", label: "Email", color: "hover:text-pink-400" },
     { icon: Instagram, href: "#", label: "Instagram", color: "hover:text-purple-400" },
     { icon: Facebook, href: "#", label: "Facebook", color: "hover:text-indigo-400" },
@@ -286,7 +286,7 @@ const name = "Ashish Chandra Paudel"
             </div>
           </div>
           <div className="pt-6 md:pt-8 border-t border-slate-800/50 text-center text-slate-500 text-xs md:text-sm">
-            <p>&copy; 2025 {name}. All rights reserved. Built with React & Tailwind CSS.</p>
+            <p>&copy; 2025 {name}. All rights reserved.</p>
           </div>
         </div>
       </footer>
